@@ -1,0 +1,86 @@
+/*
+===================
+== ELEMENTS CODE ==
+===================
+*/
+
+.box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Grid System 12 Columns
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+  float: left;
+  .box-sizing(); 
+}
+.col-1 { width: 8.333333333333332%;  }
+.col-2 { width: 16.666666666666664%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33333333333333%;  }
+.col-5 { width: 41.66666666666667%;  }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333333333333336%; }
+.col-8 { width: 66.66666666666666%;  }
+.col-9 { width: 75%; }
+.col-10{ width: 83.33333333333334%;  }
+.col-11{ width: 91.66666666666666%;  }
+.col-12{ width: 100%;} 
+
+
+
+/*
+================
+== RESET CODE ==
+================
+*/
+// Reset Styles
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+audio[controls], canvas, video {
+  display: inline-block;
+}
+html {
+//  overflow-y: scroll;                       /* 1 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 2 */
+  -webkit-text-size-adjust: 100%;             /* 3 */
+  -ms-text-size-adjust: 100%;
+}
+body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,ul,li,ol,a,em,img,strong,fieldset,form,label,article,aside,
+details,figcaption,figure,footer,header,hgroup,nav,section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+:focus { outline: 0; }
+img {
+  vertical-align: middle;
+  outline:0
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+html, body, textarea, input {
+  -webkit-text-size-adjust:none;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  text-align:left;
+  overflow: hidden;
+} 

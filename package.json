@@ -1,0 +1,52 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Starter Theme",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "glob": "latest",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-alias": "^1.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-fix-style-only-entries": "^0.4.0",
+    "webpack-notifier": "latest",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
+    "less": "^4.1.2",
+    "less-loader": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "nodemon --watch webpack.mix.js --exec 'npm run development -- --watch'",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  },
+  "author": "asochirca",
+  "license": "ISC"
+}

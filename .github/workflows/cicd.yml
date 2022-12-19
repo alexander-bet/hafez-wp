@@ -1,0 +1,49 @@
+# CI CD for starter theme
+#name: hafez-CI-CD
+
+#on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+
+#    steps:
+#      - name: Setup Node.js environment
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 12
+    
+#      - name: Git clone repo
+#        uses: actions/checkout@v3
+
+ #     - name: Install Node Modules
+ #       run: npm i
+#
+#      - name: Build App
+ #       run: npm run prod
+        
+      # Move theme folder files from /dist/theme/ to server/wp-contet/themes/starter/
+#      - name: Copy theme files using ssh by key
+ #       uses: easingthemes/ssh-deploy@main
+ #       env:
+ #           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+  #          ARGS: "-rltgoDzvO --delete"
+  #          SOURCE: "dist/theme/"
+  #          REMOTE_HOST: ${{ secrets.HOST }}
+   #         REMOTE_USER: ${{ secrets.USERNAME }}
+  #          TARGET: "/serverpath/public_html/wp-content/themes/starter/"
+#
+#     # Move plugin folder files from /dist/plugin/ to server/wp-content/plugins/starter-core/
+#      - name: Copy plugin files using ssh by key
+#        uses: easingthemes/ssh-deploy@main
+#        env:
+#            SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+#            ARGS: "-rltgoDzvO --delete"
+#            SOURCE: "dist/plugin/"
+#            REMOTE_HOST: ${{ secrets.HOST }}
+#            REMOTE_USER: ${{ secrets.USERNAME }}
+#            TARGET: "/serverpath/public_html/wp-content/plugins/starter-core/"

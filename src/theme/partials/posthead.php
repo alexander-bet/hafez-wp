@@ -1,0 +1,1 @@
+<article <?php post_class('story'); ?> id="post-<?php the_ID()?>" data-post-id="<?php the_ID()?>">

@@ -1,0 +1,1 @@
+<article <?php post_class('story'); ?> id="page-<?php the_ID()?>" data-page-id="<?php the_ID()?>">

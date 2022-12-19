@@ -1,0 +1,12 @@
+/dist/*
+!/dist/.gitkeep
+/node_modules
+/package-lock.json
+/composer.lock
+.DS_Store
+*.log
+/.srv/*
+!/.srv/custom.ini
+
+
+

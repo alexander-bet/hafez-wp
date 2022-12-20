@@ -7,37 +7,37 @@ function hafez_add_scripts($hook)
 {
 
 	// Add general scripts & styles
-	wp_enqueue_style('HafezTheme-admin-css', HafezTheme_URL . '/assets/css/admin.css', array(), HafezTheme_THEME_VERSION);
+	wp_enqueue_style('hafeztheme-admin-css', HAFEZTHEME_URL . '/assets/css/admin.css', array(), HAFEZTHEME_THEME_VERSION);
 
-	wp_enqueue_script('HafezTheme-colorpicker', HafezTheme_URL . '/assets/js/colorpicker.js', array('jquery'));
-	wp_enqueue_script('HafezTheme-admin-js', HafezTheme_URL . '/assets/js/admin.js', array('jquery', 'HafezTheme_colorpicker'), HafezTheme_THEME_VERSION);
-	wp_enqueue_script('HafezTheme-metaboxes', HafezTheme_URL . '/assets/js/metaboxes.js', array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox'));
+	wp_enqueue_script('hafeztheme-colorpicker', HAFEZTHEME_URL . '/assets/js/colorpicker.js', array('jquery'));
+	wp_enqueue_script('hafeztheme-admin-js', HAFEZTHEME_URL . '/assets/js/admin.js', array('jquery', 'HAFEZTHEME_colorpicker'), HAFEZTHEME_THEME_VERSION);
+	wp_enqueue_script('hafeztheme-metaboxes', HAFEZTHEME_URL . '/assets/js/metaboxes.js', array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox'));
 
 
 	// Add scripts for metaboxes
 	if ($hook == 'post.php' || $hook == 'post-new.php' || $hook == 'page-new.php' || $hook == 'page.php') {
-		wp_enqueue_script('HafezTheme-metaboxes', HafezTheme_URL . '/assets/js/metaboxes.js', array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox'));
-		wp_enqueue_script('HafezTheme-metabox-gallery', HafezTheme_URL . '/assets/js/metabox-gallery.js', array('jquery', 'jquery-ui-sortable'));
+		wp_enqueue_script('hafeztheme-metaboxes', HAFEZTHEME_URL . '/assets/js/metaboxes.js', array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker', 'media-upload', 'thickbox'));
+		wp_enqueue_script('hafeztheme-metabox-gallery', HAFEZTHEME_URL . '/assets/js/metabox-gallery.js', array('jquery', 'jquery-ui-sortable'));
 	}
 
 	// Add scripts for Theme Options page
 	if (in_array($hook, array('appearance_page_HafezTheme'))) {
 		wp_enqueue_script('jquery-ui-core');
-		wp_enqueue_script('options-custom', HafezTheme_URL . '/assets/js/options-custom.js', array('jquery'));
+		wp_enqueue_script('options-custom', HAFEZTHEME_URL . '/assets/js/options-custom.js', array('jquery'));
 	}
 
 	//Add scripts for Demo Import Page
-	if (in_array($hook, array('appearance_page_HafezTheme_theme_demos'))) {
+	if (in_array($hook, array('appearance_page_hafeztheme_theme_demos'))) {
 
-		wp_enqueue_script('HafezTheme-demos', HafezTheme_URL . '/assets/js/demos.js', array('jquery'));
+		wp_enqueue_script('hafeztheme-demos', HAFEZTHEME_URL . '/assets/js/demos.js', array('jquery'));
 
 		//Variables for Demo Import JS
-		wp_localize_script('HafezTheme-demos', 'olins_strings', array(
+		wp_localize_script('hafeztheme-demos', 'olins_strings', array(
 			'installingPlugin' => esc_html__('Installing plugin', 'hafezkids'),
 			'activatingPlugin' => esc_html__('Activating plugin', 'hafezkids'),
 			'tryAgain' => esc_html__('Try again', 'hafezkids'),
 			'hafezWpAdminImportNonce' => wp_create_nonce('hafez-demo-install'),
-			'hafez_ajax_url' => site_url('/wp-admin/admin-ajax.php?hafez_theme_name=' . HafezTheme_SHORTNAME . '&v=' . HafezTheme_THEME_VERSION),
+			'hafez_ajax_url' => site_url('/wp-admin/admin-ajax.php?hafez_theme_name=' . HAFEZTHEME_SHORTNAME . '&v=' . HAFEZTHEME_THEME_VERSION),
 			'plugin_failed_activation' => esc_html__('Failed to activate.', 'hafezkids'),
 			'plugin_active' => esc_html__('Active', 'hafezkids'),
 			'plugin_failed_activation_retry' => esc_html__('Failed.', 'hafezkids'),
@@ -116,8 +116,8 @@ function hafez_admin_custom_to_navigation_checkbox($posts, $args, $post_type)
  */
 function hafez_admin_table_columns()
 {
-	if (function_exists('HafezTheme_get_post_types')) {
-		foreach (HafezTheme_get_post_types() as $type => $config) {
+	if (function_exists('hafeztheme_get_post_types')) {
+		foreach (hafeztheme_get_post_types() as $type => $config) {
 			if (isset($config['columns']) && count($config['columns'])) {
 				foreach ($config['columns'] as $column) {
 					if (function_exists('hafez_admin_posts_' . $column . '_column_head') && function_exists('hafez_admin_posts_' . $column . '_column_content')) {

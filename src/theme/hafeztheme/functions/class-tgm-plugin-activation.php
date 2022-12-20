@@ -490,7 +490,7 @@ if (!class_exists('TGM_Plugin_Activation')) {
         /**
          * Correct the .mo file name for (must-use) plugins.
          *
-         * Themese use `/path/{lochafez}.mo` while plugins use `/path/{text-domain}-{lochafez}.mo`.
+         * Themese use `/path/{locale}.mo` while plugins use `/path/{text-domain}-{locale}.mo`.
          *
          * {@internal IMPORTANT! If this function changes, review the regex in the custom TGMPA
          * generator on the website.}}

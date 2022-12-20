@@ -107,8 +107,8 @@ if (is_admin()) {
  */
 function hafez_init_post_types()
 {
-    if (function_exists('HafezTheme_get_post_types')) {
-        foreach (HafezTheme_get_post_types() as $type => $options) {
+    if (function_exists('hafeztheme_get_post_types')) {
+        foreach (hafeztheme_get_post_types() as $type => $options) {
             hafez_add_post_type($type, $options['config'], $options['singular'], $options['multiple']);
         }
     }
@@ -120,8 +120,8 @@ add_action('init', 'hafez_init_post_types');
  */
 function hafez_init_taxonomies()
 {
-    if (function_exists('HafezTheme_get_taxonomies')) {
-        foreach (HafezTheme_get_taxonomies() as $type => $options) {
+    if (function_exists('hafeztheme_get_taxonomies')) {
+        foreach (hafeztheme_get_taxonomies() as $type => $options) {
             hafez_add_taxonomy($type, $options['for'], $options['config'], $options['singular'], $options['multiple']);
         }
     }
@@ -216,13 +216,13 @@ if (!function_exists('optionsframework_mlu_init')) {
  * Register Sliders post type to make it queriable
  */
 if (class_exists('HafezTheme_Sliders')) {
-    function HafezTheme_sliders_register_post_type()
+    function hafeztheme_sliders_register_post_type()
     {
         hafez_add_post_type(HafezTheme_Sliders::POST_TYPE, array(
             'public' => false,
         ), 'HafezTheme Slider', 'HafezTheme Sliders');
     }
-    add_action('init', 'HafezTheme_sliders_register_post_type');
+    add_action('init', 'hafeztheme_sliders_register_post_type');
 }
 
 
@@ -232,7 +232,7 @@ if (class_exists('HafezTheme_Sliders')) {
  *
  * @return array
  */
-function HafezTheme_get_post_types()
+function hafeztheme_get_post_types()
 {
     return array(
         'galleries' => array(
@@ -264,7 +264,7 @@ function HafezTheme_get_post_types()
  *
  * @return array
  */
-function HafezTheme_get_taxonomies()
+function hafeztheme_get_taxonomies()
 {
     return array(
         'gallery-category'    => array(

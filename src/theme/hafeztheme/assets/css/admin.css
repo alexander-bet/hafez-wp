@@ -3,7 +3,7 @@
   -------------------------------------------------------------------------------------------*/
 
 #icon-hafeztheme {
-	background: url(../images/HafezTheme_icon_32.png) 0 0 no-repeat;
+	background: url(../images/hafeztheme_icon_32.png) 0 0 no-repeat;
 }
 
 /*-------------------------------------------------------------------------------------------
@@ -2931,6 +2931,6 @@ i.smaller_version {
 	margin: 0 !important;
 }
 
-.appearance_page_HafezTheme_theme_demos {
+.appearance_page_hafeztheme_theme_demos {
 	background: #272a2d;
 }

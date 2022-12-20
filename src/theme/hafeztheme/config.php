@@ -37,7 +37,7 @@ function hafez_get_options()
 
 
 
-    $imagepath =  HafezTheme_URL . '/assets/images/';
+    $imagepath =  HAFEZTHEME_URL . '/assets/images/';
 
     $options = array();
 

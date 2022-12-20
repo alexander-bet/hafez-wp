@@ -48,7 +48,7 @@ if (!function_exists('optionsframework_mlu_js')) {
 	{
 
 		// Registers custom scripts for the Media Library AJAX uploader.
-		wp_register_script('of-medialibrary-uploader', HafezTheme_URL . '/assets/js/of-medialibrary-uploader.js', array('jquery', 'thickbox'));
+		wp_register_script('of-medialibrary-uploader', HAFEZTHEME_URL . '/assets/js/of-medialibrary-uploader.js', array('jquery', 'thickbox'));
 		wp_enqueue_script('of-medialibrary-uploader');
 		wp_enqueue_script('media-upload');
 	}

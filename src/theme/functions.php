@@ -4,14 +4,14 @@
  * DO NOT DELETE
  ****************************************************************/
 if (get_stylesheet_directory() == get_template_directory()) {
-    define('HafezTheme_PATH', get_template_directory() . '/HafezTheme');
-    define('HafezTheme_URL', esc_url(get_template_directory_uri()) . '/HafezTheme');
+    define('HAFEZTHEME_PATH', get_template_directory() . '/HafezTheme');
+    define('HAFEZTHEME_URL', esc_url(get_template_directory_uri()) . '/HafezTheme');
 } else {
-    define('HafezTheme_PATH', get_theme_root() . '/fwc/HafezTheme');
-    define('HafezTheme_URL', get_theme_root_uri() . '/fwc/HafezTheme');
+    define('HAFEZTHEME_PATH', get_theme_root() . '/fwc/HafezTheme');
+    define('HAFEZTHEME_URL', get_theme_root_uri() . '/fwc/HafezTheme');
 }
 
-require_once HafezTheme_PATH . '/constants.php';
+require_once HAFEZTHEME_PATH . '/constants.php';
 
 
 
